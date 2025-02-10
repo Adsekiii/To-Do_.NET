@@ -2,17 +2,30 @@
 	ViewData["Title"] = "To-Do List";
 }
 
+@model List<ToDoElement>
+
 <div class="text-center">
 	<h1 class="display-4">@ViewData["Title"]</h1>
-	<table>
-		<tr>
-			<th>Num</th>
-			<th>Description</th>
-			<th>Status</th>
-		</tr>
-		@{
-
-		}
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Description</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			@{
+				foreach (var element in Model)
+				{
+					<tr>
+						<td>@element.Id</td>
+						<td>@element.Description</td>
+						<td>@element.Status</td>
+					</tr>
+				}
+			}
+		</tbody>
 	</table>
 	<a class="btn btn-primary" asp-controller="ToDo" asp-action="AddEditToDo">ADD TODO</a>
 </div>

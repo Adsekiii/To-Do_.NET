@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TodoList.Models;
+using ToDoList.Models;
 
-namespace TodoList.Controllers
+namespace ToDoList.Controllers
 {
     public class HomeController : Controller
     {
@@ -25,17 +25,7 @@ namespace TodoList.Controllers
 
         /// Own views
 
-        public IActionResult ToDoList()
-        {
-            return View();
-        }
-
-        public IActionResult AddTodo()
-        {
-
-
-            return RedirectToAction("ToDoList");
-        }
+        
 
         ///
 

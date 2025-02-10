@@ -1,0 +1,18 @@
+﻿@{
+	ViewData["Title"] = "To-Do List";
+}
+
+<div class="text-center">
+	<h1 class="display-4">@ViewData["Title"]</h1>
+	<table>
+		<tr>
+			<th>Num</th>
+			<th>Description</th>
+			<th>Status</th>
+		</tr>
+		@{
+
+		}
+	</table>
+	<a class="btn btn-primary" asp-controller="ToDo" asp-action="AddEditToDo">ADD TODO</a>
+</div>
